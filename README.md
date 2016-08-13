@@ -33,9 +33,9 @@ The `convert()` method will automatically get the type of the argument, if it is
 
 The provided ranges are:
 
-*`ConverterRangeTypes::az` for [a-z]
-*`ConverterRangeTypes::AZ` for [A-Z]
-*`ConverterRangeTypes::azAZ` for [a-zA-Z]
+* `ConverterRangeTypes::az` for [a-z]
+* `ConverterRangeTypes::AZ` for [A-Z]
+* `ConverterRangeTypes::azAZ` for [a-zA-Z]
 
 You can pass in any array of chars that will be used in lieu of their decimal representation (eg. 12 will be the 12th element of the array).
 
