@@ -9,7 +9,7 @@ The purpose of this library is to convert decimal numbers to higher bases repres
 ```json
     {
         "require": {
-            "fzaffa/baseconverter": "^0.1"
+            "fzaffa/baseconverter": "dev-master"
         }
     }
 ```
