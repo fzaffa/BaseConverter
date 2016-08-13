@@ -3,14 +3,15 @@ The purpose of this library is to convert decimal numbers to higher bases repres
 
 #Installation
 
-`$ composer require fzaffa/baseconverter`
+    $ composer require fzaffa/baseconverter
 
-
+```php
     {
         "require": {
             "fzaffa/baseconverter": "^0.1"
         }
     }
+```
 
 #Usage
 
