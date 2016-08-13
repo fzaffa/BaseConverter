@@ -1,0 +1,19 @@
+{
+    "name": "fzaffa/baseconverter",
+    "description": "Converts base 10 numbers to any set of characters provided, for example an [a-zA-Z] range.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Francesco Zaffaroni",
+            "email": "fraz.93@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+    	"psr-4": {
+    		"Fzaffa\\BaseConverter\\": "src/BaseConverter/"
+    	}
+    }
+}

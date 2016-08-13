@@ -1,0 +1,6 @@
+/vendor/
+/workbench/
+.idea/
+.DS_Store
+.Spotlight-V100
+Thumbs.db
