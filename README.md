@@ -29,6 +29,8 @@ The purpose of this library is to convert decimal numbers to higher bases repres
     echo $converter->convert(mNV) //Outputs: 34523
 ```
 
+The `convert()` method will automatically get the type of the argument, if it is numeric (also a string containing only numbers work) it will convert to a string, if it's a string it will convert to decimal. To force one or the other use `convertFromStringToInt` or `convertFromIntToString`.
+
 ##Notes
 Will add tests soon.
 
