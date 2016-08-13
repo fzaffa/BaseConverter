@@ -31,6 +31,14 @@ The purpose of this library is to convert decimal numbers to higher bases repres
 
 The `convert()` method will automatically get the type of the argument, if it is numeric (also a string containing only numbers work) it will convert to a string, if it's a string it will convert to decimal. To force one or the other use `convertFromStringToInt` or `convertFromIntToString`.
 
+The provided ranges are:
+
+*`ConverterRangeTypes::az` for [a-z]
+*`ConverterRangeTypes::AZ` for [A-Z]
+*`ConverterRangeTypes::azAZ` for [a-zA-Z]
+
+You can pass in any array of chars that will be used in lieu of their decimal representation (eg. 12 will be the 12th element of the array).
+
 ##Notes
 Will add tests soon.
 
