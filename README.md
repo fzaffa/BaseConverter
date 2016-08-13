@@ -1,7 +1,7 @@
 #BaseConverter
 The purpose of this library is to convert decimal numbers to higher bases represented only by alphabet characters to render them easier to remember and easier on the eyes for permalinks and similar applications.
 
-#Installation
+##Installation
 ```bash
     $ composer require fzaffa/baseconverter
 ```
@@ -14,7 +14,7 @@ The purpose of this library is to convert decimal numbers to higher bases repres
     }
 ```
 
-#Usage
+##Usage
 
 ```php
     use Fzaffa\BaseConverter\BaseConverter;
@@ -29,8 +29,13 @@ The purpose of this library is to convert decimal numbers to higher bases repres
     echo $converter->convert(mNV) //Outputs: 34523
 ```
 
-#Notes
+##Notes
 Will add tests soon.
 
-#License
+##Todo
+
+* Handle cases where the target base is less than 10
+* Write unit tests
+
+##License
 MIT
