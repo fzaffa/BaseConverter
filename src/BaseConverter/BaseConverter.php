@@ -8,7 +8,7 @@ class BaseConverter {
 
 	public function __construct($letters)
 	{
-		if(is_string($letters))
+		if(!is_array($letters))
 		{
 			switch($letters){
 				case "azAZ":
@@ -42,21 +42,19 @@ class BaseConverter {
 
 	public function convertFromIntToString($int)
 	{
-		$decimalValues = [];
-		$output = [];
-		if($int >= $this->base)
+		if($int < count($this->letters))
 		{
-			$this->generateNumericValueForPlace($int, $decimalValues);
-			$decimalValues = array_reverse($decimalValues);
+			return $this->letters[$int];
+		}
+		$returnValue = '';
 
-			foreach ($decimalValues as $val) {
-				$output[] = $this->letters[$val];
-			}
-		} else {
-			$output[] = $this->letters[$int];
+		while($int != 0)
+		{
+			$returnValue = $this->letters[bcmod($int, $this->base)].$returnValue;
+			$int = bcdiv($int, $this->base, 0);
 		}
 
-		return join($output);
+		return $returnValue;
 	}
 
 	public function convertFromStringToInt($string)
@@ -65,7 +63,6 @@ class BaseConverter {
 		$lettersArray = array_reverse($lettersArray);
 		$number = 0;
 		$index = 0;
-
 		foreach ($lettersArray as $letter){
 			$num = array_search($letter, $this->letters);
 			$num = $num * pow($this->base, $index);
@@ -74,36 +71,6 @@ class BaseConverter {
 		}
 
 		return $number;
-	}
-
-	private function generateNumericValueForPlace($int, array &$array)
-	{
-		$highestPower = $this->largestPowerOfBase($int);
-
-		$difference = $int%$highestPower;
-
-		if ($difference > $this->base) {
-			 $this->generateNumericValueForPlace($difference, $array);
-		} else 
-		{
-			$array[] = $difference;
-		}
-		$array[] = intval($int/$highestPower);
-	}
-
-	private function largestPowerOfBase($int)
-	{
-		if($int != $this->base)
-		{
-			$new = $this->base;
-			while ($new < $int)
-			{
-				$new = $new*$this->base;
-			}
-
-			return $new/$this->base;
-		}
-		return $this->base;
 	}
 }
 
