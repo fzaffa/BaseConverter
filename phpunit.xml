@@ -15,7 +15,6 @@
         <directory>tests</directory>
         <filter>
             <whitelist processUncoveredFilesFromWhitelist="true">
-                <directory suffix=".php">/tests/src/BaseConverter</directory>
             </whitelist>
         </filter>
     </testsuite>
