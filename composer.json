@@ -16,7 +16,7 @@
     },
     "autoload": {
     	"psr-4": {
-    		"Fzaffa\\BaseConverter\\": "src/BaseConverter/"
+    		"Fzaffa\\BaseConverter\\": ["src/BaseConverter/", "tests/src/BaseConverter"]
     	}
     }
 }
