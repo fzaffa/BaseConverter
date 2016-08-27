@@ -22,7 +22,7 @@ The purpose of this library is to convert decimal numbers to higher bases repres
 
     require "vendor/autoload.php"
 
-    $converter = new BaseConverter(ConverterRangeTypes::azAZ);
+    $converter = new BaseConverter(ConverterRangeTypes::ALPHA_ULCASE);
 
     echo $converter->convert(34523) //Outputs: mNV
 
@@ -33,9 +33,9 @@ The `convert()` method will automatically get the type of the argument, if it is
 
 The provided ranges are:
 
-* `ConverterRangeTypes::az` for [a-z]
-* `ConverterRangeTypes::AZ` for [A-Z]
-* `ConverterRangeTypes::azAZ` for [a-zA-Z]
+* `ConverterRangeTypes::ALPHA_LCASE` for [a-z]
+* `ConverterRangeTypes::ALPHA_UCASE` for [A-Z]
+* `ConverterRangeTypes::ALPHA_ULCASE` for [a-zA-Z]
 
 You can pass in any array of chars that will be used in lieu of their decimal representation (eg. 12 will be the 12th element of the array).
 

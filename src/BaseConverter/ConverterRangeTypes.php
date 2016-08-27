@@ -5,7 +5,7 @@ namespace Fzaffa\BaseConverter;
 
 
 class ConverterRangeTypes {
-    const azAZ = "azAZ";
-    const az = "az";
-    const AZ = "AZ";
+    const ALPHA_ULCASE = "azAZ";
+    const ALPHA_LCASE = "az";
+    const ALPHA_UCASE = "AZ";
 }
