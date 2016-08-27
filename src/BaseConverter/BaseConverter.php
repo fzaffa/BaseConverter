@@ -37,7 +37,7 @@ class BaseConverter {
 		} elseif(is_string($arg)) {
 			return $this->convertFromStringToInt($arg);
 		}
-		throw new Exception("Argument passed must be string or numeric", 1);
+		throw new \Exception("Argument passed must be string or numeric", 1);
 	}
 
 	public function convertFromIntToString($int)
