@@ -9,7 +9,7 @@ class BaseConverterTest extends TestCase{
 
     public function setUp()
     {
-        $this->converter = new BaseConverter(ConverterRangeTypes::azAZ);
+        $this->converter = new BaseConverter(ConverterRangeTypes::ALPHA_ULCASE);
     }
 
     public function testAutomaticConvertType()
